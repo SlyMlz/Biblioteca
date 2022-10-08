@@ -13,31 +13,15 @@ import {EstadoPrestamoComponent} from './estados/estado-prestamo/estado-prestamo
 import {LoginUsuarioComponent} from './estados/login-usuario/login-usuario.component';
 
 const routes: Routes = [
-
-  {
-    path:'crud',component:CrudComponent
-  },
-  {
-    path:'seguridad/sesion',component:InicioSesionComponent
-  },
-  {
-    path:'seguridad/listarU',component:ListarUsuarioComponent
-  },
-  {
-    path:'prestamo',component:PrestamoComponent
-  },
-  {
-    path:'gestion_libros',component:RegistroLibroComponent
-  },
-  {
-    path:'estado_prestamo',component:EstadoPrestamoComponent
-  },
-  {
-    path:'login_usuario',component:LoginUsuarioComponent
-  },
-  {
-    path:'**', pathMatch: 'full', redirectTo: 'seguridad'
-  },
+  {path:'login', component: LoginUsuarioComponent},
+  {path:'crud',component:CrudComponent},
+  {path:'seguridad/sesion',component:InicioSesionComponent},
+  {path:'seguridad/listarU',component:ListarUsuarioComponent},
+  {path:'prestamo',component:PrestamoComponent},
+  {path:'gestion_libros',component:RegistroLibroComponent},
+  {path:'estado_prestamo',component:EstadoPrestamoComponent},
+  {path:'login_usuario',component:LoginUsuarioComponent},
+  {path:'**', pathMatch: 'full', redirectTo: 'login'}
 
 ];
 

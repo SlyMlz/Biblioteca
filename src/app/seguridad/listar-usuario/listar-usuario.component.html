@@ -1,45 +1,47 @@
 <div class="row mt3">
-   
-    
+
     <div class="col lg6">
         <br><br>
-        <button class="btn btn-primary" float end routerLink="/add">Agregar integrante</button>
+        <button class="btn btn-primary" routerLink="/crud">Agregar</button>
     </div>
 
-</div>
 
-<table *ngIf="listUsuario.length>0" class="table table-hover mt-3">
-    <thead>
-        <tr>
-            <td>Nombre</td>
-            <td>cedula</td>
-            <td>correo</td>
-            <td>n° celular</td>
-            <td>Opciones</td>
-            <td></td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let coment of listUsuario">
-            <td>{{coment.nombre}}</td>
-            <td>{{coment.cedula}}</td>
-            <td>{{coment.correo}}</td>
-            <td>{{coment.n_celular}}</td>
-            
-            
-            <td style="width: 5%;">
-                <button class="btn btn-primary btn-sm float-end">Editar</button>
-            </td>
-            <td style="width: 5%;">
-                <button class="btn btn-danger btn-sm float-end">Eliminar</button>
-            </td>
-        </tr>
-        
-    </tbody>
-</table>
+</div>
+<div class="container">
+    <table *ngIf="listUsuario.length>0" class="table table-hover mt-3">
+        <thead>
+            <tr>
+                <td>Nombre</td>
+                <td>cedula</td>
+                <td>correo</td>
+                <td>n° celular</td>
+                <td>Opciones</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <div class="container"></div>
+            <tr *ngFor="let usuarios of listUsuario">
+                <td>{{usuarios.nombre}}</td>
+                <td>{{usuarios.cedula}}</td>
+                <td>{{usuarios.correo}}</td>
+                <td>{{usuarios.n_celular}}</td>
+
+
+                <td style="width: 5%;">
+                    <button class="btn btn-primary btn-sm float-end">Editar</button>
+                </td>
+                <td style="width: 5%;">
+                    <button class="btn btn-danger btn-sm float-end">Eliminar</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
 
 
 <!--Directiva-->
 <div *ngIf="listUsuario.length==0" class="row mt5">
-    <h5>No hay ningun comentario registrado</h5>
+    <h5>No hay ningun usuario registrado</h5>
 </div>
