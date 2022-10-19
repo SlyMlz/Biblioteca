@@ -7,44 +7,52 @@
 						<div class="form-header">
 							<h1>REGISTRO DE USUARIO</h1>
 						</div>
-						<form>
+						<form [formGroup]="agregaUsu" (ngSubmit)="agregar()" >
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
-										<span class="form-label">Nombres</span>
-										<input class="form-control" type="text" placeholder="Nombres del usuario" required>
+										<span class="form-label" >Nombres</span>
+										<input class="form-control" id="nom" name="nom" type="text" placeholder="Nombres del usuario" required
+										formControlName="nom">
 									</div>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
 										<span class="form-label">Cedula</span>
-										<input class="form-control" type="text" placeholder="Cedula del usuario" required>
+										<input class="form-control" id="ced" name="ced"type="text" placeholder="Cedula del usuario" required
+										formControlName="ced">
 									</div>
 								</div>
 							</div>
 							<div class="form-group">
 								<span class="form-label">Córreo electronico</span>
-								<input class="form-control" type="email" placeholder="Ingrese un córreo valido" required>
+								<input class="form-control" id="corre" name="corre" type="text" placeholder="Ingrese un córreo valido" required
+								formControlName="corre">
 							</div>
 							<div class="form-group">
 								<span class="form-label">Número de cóntacto</span>
-								<input class="form-control" type="text" placeholder="Ingrese un número de célular valido" required>
+								<input class="form-control" id="tel" name="tel" type="number" placeholder="Ingrese un número de célular valido" required
+								formControlName="tel">
 							</div>
 							<div class="form-group">
 								<span class="form-label">Dirección</span>
-								<input class="form-control" type="number" placeholder="N° Pag." required>
+								<input class="form-control" id="dir" name="dir" type="text" placeholder="N° Pag." required
+								formControlName="dir">
 							</div>
 							
 							
 									<div class="form-group">
 										<span class="form-label">Fecha de registro</span>
-										<input class="form-control" type="date" required>
+										<input class="form-control" type="date" required id="fech" name="fech"
+										formControlName="fech">
 									</div>
 								
 								
 							
 							<div class="form-btn">
-								<button class="submit-btn" routerLink="/">Guardar</button>
+								<button class="submit-btn" routerLink="/">Salir</button>
+								<br>
+								<button class="submit-btn" type="submit">Guardar</button>
 							</div>
 						</form>
 					</div>

@@ -35,4 +35,6 @@ export class PrestamoComponent implements OnInit {
     console.log(regprestamo);
   }
 
+  
+
 }
