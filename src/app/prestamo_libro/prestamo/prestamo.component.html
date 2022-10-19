@@ -13,39 +13,45 @@
                                     <h4 class="mt-1 mb-5 pb-1">Prestamo de Libros</h4>
                                 </div>
 
-                                <form>
+                                <form [formGroup]="agregaPrestamo" (ngSubmit)="agregar()">
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form2Example11">Nombre del usuario</label>
-                                        <input type="text" id="nomUsu" class="form-control"
-                                            placeholder="Nombre de la persona a la que se le empresta" />
+                                        <label class="form-label" for="nomUsu">Nombre del usuario</label>
+                                        <input type="text" id="nomUsu" name="nomUsu" class="form-control"
+                                            placeholder="Nombre de la persona a la que se le empresta" 
+                                            formControlName="nomUsu">
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form2Example22">Cedula usuario</label>
-                                        <input type="number" id="cedUsu" class="form-control"
-                                            placeholder="Cedula de la persona a la que se le empresta" />
+                                        <label class="form-label" for="cedUsu">Cedula usuario</label>
+                                        <input type="number" id="cedUsu" name="cedUsu" class="form-control"
+                                            placeholder="Cedula de la persona a la que se le empresta"
+                                            formControlName="cedUsu">
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form2Example22">Telefono usuario</label>
-                                        <input type="number" id="telUsu" class="form-control"
-                                            placeholder="Celular de la persona a la que se le empresta" />
+                                        <label class="form-label" for="telUsu">Telefono usuario</label>
+                                        <input type="number" id="telUsu" name="telUsu" class="form-control"
+                                            placeholder="Celular de la persona a la que se le empresta"
+                                            formControlName="telUsu">
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form2Example22">Codigo libro</label>
-                                        <input type="number" id="codlib" class="form-control"
-                                            placeholder="Codigo del libro que se empresta" />
+                                        <label class="form-label" for="codlib">Codigo libro</label>
+                                        <input type="number" id="codlib" name="codlib" class="form-control"
+                                            placeholder="Codigo del libro que se empresta"
+                                            formControlName="codlib">
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form2Example22">Nombre libro</label>
-                                        <input type="number" id="nomLib" class="form-control"
-                                            placeholder="Nombre del libro que se empresta" />
+                                        <label class="form-label" for="nomLib">Nombre libro</label>
+                                        <input type="text" id="nomLib" name="nomLib" class="form-control"
+                                            placeholder="Nombre del libro que se empresta"
+                                            formControlName="nomLib">
                                     </div>
 
                                     <div class="d-flex align-items-center justify-content-center pb-4">
-                                        <button type="button" class="btn btn-outline-primary">Registrar</button>
+                                        <!--button type="button" class="btn btn-outline-primary">Registrar</button-->
+                                        <button type="submit" class="btn btn-primary float-ed ">Agregar</button>
                                     </div>
 
                                 </form>

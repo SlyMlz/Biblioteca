@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {} from 
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Logusu } from 'src/app/interfaces/logusu';
 
 @Component({
   selector: 'app-login-usuario',
@@ -8,9 +9,26 @@ import {} from
 })
 export class LoginUsuarioComponent implements OnInit {
 
-  constructor() { }
+  login: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.login = this.fb.group({
+      namelog :['',Validators.required],
+      pass :['',Validators.required]
+    })
+   }
+
 
   ngOnInit(): void {
+  }
+
+  agregar(){
+    console.log(this.login);
+    const logusu:Logusu={
+      namelog: this.login.get('namelog')?.value,
+      pass: this.login.get('pass')?.value,
+    }
+    console.log(logusu);
   }
 
 }

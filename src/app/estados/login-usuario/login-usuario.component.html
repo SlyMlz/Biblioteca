@@ -13,22 +13,24 @@
                                     <h4 class="mt-1 mb-5 pb-1">BIBLIOTECA</h4>
                                 </div>
 
-                                <form>
+                                <form [formGroup]="login" (ngSubmit)="agregar()">
                                     <div class="form-outline mb-4">
-                                        <input type="email" id="form2Example11" class="form-control"
-                                            placeholder="Numero de cedula o correo" />
+                                        <input type="text" name="namelog" id="namelog" class="form-control"
+                                            placeholder="Numero de cedula o correo" 
+                                            formControlName="namelog">
                                         <label class="form-label" for="form2Example11">Nombre de usuario</label>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <input type="password" id="form2Example22" class="form-control" 
-                                        placeholder="Contraseña de usuario"/>
+                                        <input type="text" name="pass" id="pass" class="form-control" 
+                                        placeholder="Contraseña de usuario"
+                                        formControlName="pass">
                                         <label class="form-label" for="form2Example22">Contraseña</label>
                                     </div>
 
                                     <div class="text-center pt-1 mb-5 pb-1">
                                         <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-                                             routerlink="/seguridad/sesion">Iniciar sesión</button>
+                                             routerlink="/seguridad/sesion" type="submit">Iniciar sesión</button>
                                         <a class="text-muted" href="#!">¿Has olvidado tu contraseña?</a>
                                     </div>
 

@@ -12,6 +12,7 @@ import { RegistroLibroComponent } from './gestion_libros/registro-libro/registro
 import { LoginUsuarioComponent } from './estados/login-usuario/login-usuario.component';
 import { EstadoPrestamoComponent } from './estados/estado-prestamo/estado-prestamo.component';
 import { PrestamoComponent } from './prestamo_libro/prestamo/prestamo.component'
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PrestamoComponent } from './prestamo_libro/prestamo/prestamo.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
